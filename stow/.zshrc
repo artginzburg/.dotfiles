@@ -106,10 +106,6 @@ export PNPM_HOME="/Users/artginzburg/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
-# tabtab source for packages
-# uninstall by removing these lines
-[[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
-
 eval $(thefuck --alias)
 
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
