@@ -1,0 +1,1 @@
+- If "one-time-scripts" gets too large — figure out a way to automate it. So that when I e.g. add a new plugin to zsh-plugins.sh — I wouldn't have to manually install it. Instead, I'd like to run one command that figures out what I added across the one-time-scripts directory, and suggests to run that.
