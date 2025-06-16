@@ -1,0 +1,17 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Art Ginzburg
+	email = ginzburg.arthur@gmail.com
+	signingkey = 6A7C54B2F766A56B
+[core]
+	excludesfile = ~/Documents/GitHub/.dotfiles/macOS.gitignore
+[url "https://github.com/"]
+	insteadOf = gh://
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
