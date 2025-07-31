@@ -41,7 +41,7 @@ EOT
 }
 
 function reload() {
-	. ./.zshrc
+	. ~/.zshrc
 }
 
 function external_ip {
