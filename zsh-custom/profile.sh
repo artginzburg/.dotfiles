@@ -94,10 +94,13 @@ EOT
 }
 
 function mkicns() {
+    # Accepts a 1024p PNG file and creates an .icns file from it. Or an .appiconset directory.
     if [[ -z "$@" ]]; then
         echo "Input file missing"
     else
         filename=${1%.*}
+
+        # These are for creating .icns. If you are already using XCode — better use an appiconset.
         mkdir $filename.iconset
         sips -z 16 16   $1 --out $filename.iconset/icon_16x16.png
         sips -z 32 32   $1 --out $filename.iconset/icon_16x16@2x.png
@@ -111,6 +114,17 @@ function mkicns() {
         cp $1 $filename.iconset/icon_512x512@2x.png
         iconutil -c icns $filename.iconset
         rm -r $filename.iconset
+
+        # Uncomment the following lines and comment the ones above if you want to create the bare minimum set of icons, while sacrificing automatic .icns compliance.
+        dirname="$filename.appiconset"
+        mkdir $dirname
+        sips -z 16 16   $1 --out $dirname/icon_16p.png
+        sips -z 32 32   $1 --out $dirname/icon_32p.png
+        sips -z 64 64   $1 --out $dirname/icon_64p.png
+        sips -z 128 128 $1 --out $dirname/icon_128p.png
+        sips -z 256 256 $1 --out $dirname/icon_256p.png
+        sips -z 512 512 $1 --out $dirname/icon_512p.png
+        cp $1 $dirname/icon_1024p.png
     fi
 }
 
