@@ -5,6 +5,7 @@ export HOMEBREW_NO_ENV_HINTS=1
 
 #region --- Completions
 source $CUSTOM_DOTFILES_DIR/zsh-custom/complete_npx.sh
+source $CUSTOM_DOTFILES_DIR/zsh-custom/_make.zsh
 eval "$(pnpm completion zsh)"
 #endregion
 
