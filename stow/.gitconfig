@@ -8,7 +8,7 @@
 	email = ginzburg.arthur@gmail.com
 	signingkey = 6A7C54B2F766A56B
 [core]
-	excludesfile = ~/Documents/GitHub/.dotfiles/macOS.gitignore
+	excludesfile = /Users/artginzburg/Documents/GitHub/.dotfiles/macOS.gitignore
 [url "https://github.com/"]
 	insteadOf = gh://
 [commit]
