@@ -9,6 +9,10 @@ source $CUSTOM_DOTFILES_DIR/zsh-custom/_make.zsh
 eval "$(pnpm completion zsh)"
 #endregion
 
+#region --- Utils
+source $CUSTOM_DOTFILES_DIR/zsh-custom/utils/yt2apple.sh
+#endregion
+
 alias агсл='fuck'
 
 # #   spotlight: Search for a file using MacOS Spotlight's metadata
