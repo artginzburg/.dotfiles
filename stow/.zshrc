@@ -79,3 +79,7 @@ export GPG_TTY=$(tty)
 
 CUSTOM_DOTFILES_DIR="$HOME/Documents/GitHub/.dotfiles"
 source $CUSTOM_DOTFILES_DIR/zsh-custom/profile.sh
+
+# Claude CLI
+export PATH="$HOME/.local/bin:$PATH"
+# Claude CLI end
